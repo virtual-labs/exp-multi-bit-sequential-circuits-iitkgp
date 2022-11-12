@@ -2,12 +2,12 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "How can parallel data be taken out of a shift register simultaneously?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Use the Q output of the first FF",
+        "b": "Use the Q output of the last FF",
+        "c": "Tie all of the Q outputs together",
+        "d": "Use the Q output of each FF"
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -15,16 +15,16 @@
         "c": "Explanation 2",
         "d": "Explanation 2"
       },
-      "correctAnswer": "a",
+      "correctAnswer": "d",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "What does the output enable do on the 74395A chip?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "It determines when data can be loaded.",
+        "b": "It forces all outputs to go HIGH",
+        "c": "It forces all outputs to go LOW.",
+        "d": "It activates the three-state buffer."
       },
       "explanations": {
         "a": "Explanation 1  <a href='www.google.com'>here</a>",
@@ -32,8 +32,29 @@
         "c": "Explanation 2",
         "d": "Explanation 2"
       },
-      "correctAnswer": "c",
+      "correctAnswer": "d",
       "difficulty": "beginner"
+
+      
+    },
+    {
+      "question": "To operate correctly, starting a ring shift counter requires:",
+      "answers": {
+        "a": "clearing all the flip-flops",
+        "b": "presetting one flip-flop and clearing all others",
+        "c": "clearing one flip-flop and presetting all others",
+        "d": "presetting all the flip-flops"
+      },
+      "explanations": {
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+
+      
     }
   ]
 }
