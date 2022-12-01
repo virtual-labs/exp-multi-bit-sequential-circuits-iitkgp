@@ -1,0 +1,463 @@
+<!--Lab:exp_9a_Shift Register
+	File name: exp9a.html
+    Author:Prakriti Dhang--->
+
+    <!DOCTYPE HTML>
+    <html>
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+         
+        
+        <link rel="stylesheet" type="text/css" href="style_exp9a.css">
+       
+        <script type="text/javascript" src="ledonoff_exp9a.js"></script>
+        
+        
+        <!--link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" /-->
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
+        <script type="text/javascript" src="addtbl_exp9a.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" id="">
+        </script>
+         <!--script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script-->
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <!--script src="datetime_show_exp9.js"></script-->
+
+    <!--script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+    <script src="https://playground.abysscorp.org/chartjs/livecharts/dist/Chart.min.js"></script-->
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="graphchartjs9a.js"></script>
+    
+         <style>
+           
+            table,th,td{
+                border:1px solid black;
+            border-collapse:collapse
+        }
+        
+            th,td
+            {
+               /*padding:6px;*/
+                text-align: center;
+                font-size: small;
+                
+                
+            }
+            ol li{
+                padding-left:1em;
+                padding-bottom: 0.5em;
+               
+            }
+            .responsive {
+  width: 100%;
+  height: auto;
+            }
+            .canvasjs-chart-credit {
+        display:none ;
+            }
+      .canvasjs-chart-toolbar{
+        display:none ;
+      }
+      .instscroll{
+  height: 450px;
+  overflow: auto;
+
+      }
+      .intbl{
+        
+        overflow-x: auto;
+       
+      }
+     
+      
+      .dropbtn {
+  background-color: #cce1ff;
+  color: black;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid black;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdownbtn {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdownbtn-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdownbtn-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border: 2px solid black;
+}
+
+/* Change color of dropdown links on hover */
+.dropdownbtn-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdownbtn:hover .dropdownbtn-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdownbtn:hover .dropbtn {background-color: #d2d8f3;}
+
+            
+            </style>
+           
+            
+                
+                <script>
+                    function pgload(){
+                        document.getElementById("clkb").disabled = true;
+                        document.getElementById("clkbs").disabled = true;
+                        document.getElementById("clkb2").disabled = true;
+                        document.getElementById("clkbs2").disabled = true;
+                        document.getElementById('plotb1').disabled=true;
+                        document.getElementById('plotb2').disabled=true;
+                        
+                       /* document.getElementById("b3").onclick = false;
+                        document.getElementById("b4").onclick = false;
+                        document.getElementById("b5").onclick = false;
+                        document.getElementById("b6").onclick = false;*/
+                        
+                    }
+                
+
+
+                $( function() {
+        $( "#draggable" ).draggable();
+      } );
+                /* function allowDrop(ev) {
+                  ev.preventDefault();
+                }
+                
+                function drag(ev) {
+                  ev.dataTransfer.setData("text", ev.target.id);
+                }
+                
+                function drop(ev) {
+                  ev.preventDefault();
+                  var data = ev.dataTransfer.getData("text");
+                  ev.target.appendChild(document.getElementById(data));
+                } */
+                </script>
+               
+                <!--script src="https://api.countapi.xyz/hit/vlabs.iitkgp.ac.in/visits?callback=liveViews" async ></script-->
+    </head>
+    <body style="background-color:#0d213b"  onload="pgload()" >
+        
+            
+    <div class="container-fluid">
+<div class="row">
+<div id="dispdatetime" class="col-md-3 col-sm-6 col-xs-6" style="color: aliceblue;"></div>
+<div class="col-sm-7"></div>
+
+<div id="disptimer" class="col-md-2 col-sm-6 col-xs-6" style="color: aliceblue;">
+   <!--h6>Visitors: <span id="visits" style="color: aliceblue;"></span> </h6--> 
+    
+</div>
+
+</div>
+
+</div>
+
+
+    </div>
+    
+      <div class="container-fluid">
+        
+        <div class="row"> <!-- row 1-->
+            <img src="../../images/logo.jpg"  class="img-fluid"/>
+        </div> <!-- row 1-->
+        
+        
+            <div class="row"> <!-- row 2 -->
+                <b><h2 style="text-align:center;color:rgb(54,230,78);">Analysis and Synthesis of Multi-bit Sequential Circuits using Shift Register </h2></b>
+            </div> <!-- row 2 ends-->
+        
+        <div class="row" > <!-- row 3-->
+          <div class="col-md-4" > <!-- column 1 instrustion and table-->
+              
+               
+           
+            <div id="inst" style="background-color:#96baf0;font-size:16px;font-weight:bold;border:1px solid #3385ff">
+                <div class="dropdown">
+                    <p style="text-align:center;color:rgb(26,0,97)"> INSTRUCTION</p>
+                    <div class="dropdown-content instscroll" style="background-color:white;border:1px solid #3385ff">
+                        <ol type="1">
+                            <li>Apply \(V_{CC}\) , so that "clock start" button for the clock pulse will be enabled (<span style= "text-decoration: overline;">CP1</span>) . Apply low level voltage to ground(GND) . </li>
+                            <li>Next, apply low voltage to the mode control input (S) and start the clock pulse(CP1).
+                                Now the serial input Ds is enabled.
+                                The input at \(D_{s}\) will be shifted right to the outputs \(Q_{0}\), \(Q_{1}\), \(Q_{2}\), \(Q_{3}\) at negetive transition of CP1.
+                                All the parallel inputs \(P_{0}\), \(P_{1}\), \(P_{2}\), \(P_{3}\) are disabled
+                            </li>
+                            <li>Now apply high voltage to \(D_{s}\) input and set no of clock pulses to 1. See that the input will be shifted to \(Q_{0}\) output at negetive clock edge.
+                            </li>
+                            <li> Next, start the clock pulse again. See the input is now shifted to the output  \(Q_{1}\).</li>
+                            <li>Again start the clock pulse and see the input is shifted to the output  \(Q_{2}\)</li>
+                            <li>Start the clock pulse again. Now see that at fouth clock pulse input is shifted to the output  \(Q_{3}\).</li>
+                            <li>Apply high voltage to the mode control input (s).
+                                Now the "Clock Start" button for the second clock pulse (<span style= "text-decoration: overline;">CP2</span>) is enabled.
+                                Parallel inputs \(P_{0}\), \(P_{1}\), \(P_{2}\), \(P_{3}\) are enabled.
+                                These parallel inputs are directly loaded to the outputs \(Q_{0}\), \(Q_{1}\), \(Q_{2}\), \(Q_{3}\) respectively.</li>
+                            <li>Start the clock pulse (<span style= "text-decoration: overline;">CP2</span>).After generation of some clock pulses stop the clock by clicking in "Clock Stop" button.</li>
+                            <li>Now apply high voltage to \(P_{0}\) input and set no of clock pulses to 1. See \(P_{0}\) input is directly loaded to the output \(Q_{0}\).</li>
+                            <li>Next, apply high voltage to \(P_{1}\) and start the clock pulse. \(P_{1}\) input is directly loaded to \(Q_{1}\).</li>
+                            <li>Next, apply high voltage to \(P_{2}\) and start the clock pulse. \(P_{2}\) input is directly loaded to \(Q_{2}\).</li>
+                            <li>Now apply high voltage to \(P_{3}\) and start the clock pulse. \(P_{3}\) input is directly loaded to \(Q_{3}\).</li>
+                            <li>Click button "Plot" to see the graphical representation of shift register.</li>
+                            <li><b>Note</b>: Red symbolize as Low (L), Green symbolize as High(H).</li>
+                        </ol> 
+        
+                    </div>
+                </div>
+            </div>
+            
+        </div> <!-- column 1 instrustion and table ends-->
+            <div class="col-md-3"  > 
+            <div  id="tablein" style="background-color:#96baf0;font-size:16px;font-weight:bold;border:1px solid #3385ff">
+        <div class="tbtitle">
+                    <p style="text-align:center;color:rgb(26,0,97)">TRUTH TABLE 
+                        <div class="dropdownbtn">
+                            <button onclick="myFunction()" id="dbtn" class="dropbtn">Graph Plot</button>
+                            <div id="myDropdown" class="dropdownbtn-content">
+                                <a> <input type="button" id="plotb1"  value="Plot for SIPO"   onclick="plotshftreg1()" style="    cursor: pointer; " /></a>
+                                <a><input type="button" id="plotb2"  value="Plot for PIPO"   onclick="plotshftreg2()" style="   cursor: pointer; "/></a>
+                            
+                            </div>
+                          </div>
+                        <!--input type="button" id="plotb"  value="Plot"   onclick="plotshftreg()" style=" background-color: #d9e2f0;  float:left; cursor: pointer;font-size: 16px;font-weight: bold; border:3px solid rgb(26, 0, 97); visibility: visible;"/>
+                        <input type="button" id="addb"  value="Add to Table"  onclick="instbl()" style=" background-color: #d9e2f0;  float:right; cursor: pointer;font-size: 16px;font-weight: bold; border:3px solid rgb(26, 0, 97); visibility: hidden;"/--></p>
+                    
+                        <div class="intbl" style="background-color:white;border:1px solid #3385ff">
+                        <p id="equationd" style="text-align:center;"><b></b></p>
+                    <center>
+                    <table id="mytableshftreg" class="table table-hover">
+                
+                <tr class="table-light"> 
+                    <th scope="col" rowspan="2" > Operating mode</th>
+                    <th scope="col" colspan="5"> Inputs</th>
+                    <th scope="col" colspan="5">Outputs</th>
+            
+                    
+                </tr>
+                
+            <tr>
+                <td>\(S_{}\)</td>
+                <td><span style= "text-decoration: overline;">\(CP_{1}\)</span></td>
+                <td><span style= "text-decoration: overline;">\(CP_{2}\)</span></td>
+                <td>\(D_{s}\)</td>
+                <td>\(P_{n}\)</td>
+                <td>\(Q_{0}\)</td>
+                <td>\(Q_{1}\)</td>
+                <td>\(Q_{2}\)</td>
+                <td>\(Q_{3}\)</td>
+            </tr>           
+           <tr>
+               <td rowspan="2">Shift</td>
+               <td>\(L_{}\)</td>
+                <td>#</td>
+                <td>\(X_{}\)</td>
+                <td>\(I_{}\)</td>
+                <td>\(X_{}\)</td>
+                <td>\(L_{}\)</td>
+                <td>\(Q_{0}\)</td>
+                <td>\(Q_{1}\)</td>
+                <td>\(Q_{2}\)</td>
+           </tr>
+           <tr>
+           
+            <td>\(L_{}\)</td>
+             <td>#</td>
+             <td>\(X_{}\)</td>
+             <td>\(H_{}\)</td>
+             <td>\(X_{}\)</td>
+             <td>\(H_{}\)</td>
+             <td>\(Q_{0}\)</td>
+             <td>\(Q_{1}\)</td>
+             <td>\(Q_{2}\)</td>
+             </tr>
+             <tr>
+                 <td>Parallel Load</td>
+                 <td>\(H_{}\)</td>
+             <td>\(X_{}\)</td>
+             <td>#</td>
+             <td>\(X_{}\)</td>
+             <td>\(P_{n}\)</td>
+             <td>\(P_{0}\)</td>
+             <td>\(P_{1}\)</td>
+             <td>\(P_{2}\)</td>
+             <td>\(P_{3}\)</td>
+             </tr>
+            
+                </table>
+                </center>
+                    </div>
+        
+        </div>
+        </div>
+        </div>
+        
+        
+       <!-- Show alert for VCC 1 and VCC2, GND1 and GND2-->
+       
+       
+          
+        
+          <div class="col-md-4" > <!-- style="float:right" column 2 circuit-->
+            <div id="cmaind" style="background-color:#96baf0;font-size:16px;font-weight:bold;border:1px solid #3385ff">
+        <div class="ctitle">
+                    <p style="text-align:center;color:rgb(26,0,97)">CIRCUIT DIAGRAM</p>
+                    
+                    <div class="crkt" style="background-color:white; position:absolute; border:2px solid #3385ff;">
+                        <input type="button" id="clkb"  value="Clock Start1"  onclick="clockstrt()" style=" background-color: #d9e2f0;  float:left; cursor: pointer;font-size: 16px;font-weight: bold; height: 25px; border:2px solid rgb(26, 0, 97);"/>
+                        <input type="button" id="clkbs"  value="Clock Stop1" onclick="clockstop()"  style=" background-color: #d9e2f0; position:absolute; top: 40px; right: 248px; float: left; cursor: pointer;font-size: 16px;font-weight: bold;height: 25px;  border:2px solid rgb(26, 0, 97);background-color: #ff0909;display: none;"/>
+                        <input type="button" id="clkb2"  value="Clock Start2"  onclick="clockstrt2()" style=" background-color: #d9e2f0;  position:absolute; top: 84px; right: 198px; float: left; cursor: pointer;font-size: 16px;font-weight: bold; height: 25px; border:2px solid rgb(26, 0, 97);"/>
+                        <input type="button" id="clkbs2"  value="Clock Stop2" onclick="clockstop2()"  style=" background-color: #d9e2f0; position:absolute; top: 84px; right: 199px; float: left; cursor: pointer;font-size: 16px;font-weight: bold; height: 25px; border:2px solid rgb(26, 0, 97);background-color: #ff0909;display: none;"/>
+                       
+                        <!--input type="number" min="0"  max="1" id="textclk" value="" placeholder="No. of clock pulses" style=" float:right; cursor: pointer;font-size: 16px;font-weight: bold; border:2px solid rgb(26, 0, 97);"/-->
+                    <img class="mimg" src="shiftreg.PNG" class="img-fluid" alt="shift register image"/>
+                    
+                    <div id="red1"  ></div>
+                    <div id="green1"  ></div>
+                    <div id="red2"  ></div>
+                    <div id="green2"  ></div>
+                  
+                   
+                    <img id="b1" onclick="a1()" src="red.JPG" class="img-fluid" />
+                    <img id="b2" onclick="a2()" src="red.JPG" class="img-fluid" />
+                    <img id="b3" onclick="a3()" src="red.JPG" class="img-fluid" />
+                    <img id="b4" onclick="a4()" src="red.JPG" class="img-fluid"  />
+                    <img id="b5" onclick="a5()" src="red.JPG" class="img-fluid" />
+                    <img id="b6" onclick="a6()" src="red.JPG" class="img-fluid" />
+                    <img id="b7" onclick="a7()" src="red.JPG" class="img-fluid" />
+                    <img id="b8" onclick="a8()" src="red.JPG" class="img-fluid" />
+    
+                    <div id="b1g"  ></div>
+                    <div id="b1r"  ></div>
+    
+                    <div id="b2g"  ></div>
+                    <div id="b2r"  ></div>
+    
+                    <div id="b3g"  ></div>
+                    <div id="b3r"  ></div>
+                    <div id="b4g"  ></div>
+                    <div id="b4r"  ></div>
+    
+                    <div id="b5g"  ></div>
+                    <div id="b5r"  ></div>
+                    <div id="b6g"  ></div>
+                    <div id="b6r"  ></div>
+                    <div id="b7g"  ></div>
+                <div id="b7r"  ></div>
+
+                <div id="b8g"  ></div>
+                <div id="b8r"  ></div>
+
+        <img id="lon0" src="ledon.png" class="img-fluid">
+        <img id="loff0" src="loff.png" class="img-fluid">
+
+        <img id="lon1" src="ledon.png" class="img-fluid">
+        <img id="loff1" src="loff.png" class="img-fluid">
+    
+        <img id="lon2" src="ledon.png" class="img-fluid">
+        <img id="loff2" src="loff.png" class="img-fluid">
+
+        <img id="lon3" src="ledon.png" class="img-fluid">
+        <img id="loff3" src="loff.png" class="img-fluid">
+    
+                    </div>
+                
+                    </div>
+          
+        </div>
+        
+        
+          </div> <!-- column 2 circuit ends-->
+
+          
+            
+                
+            
+
+        </div>  <!-- row 3 ends-->
+
+
+    </div> <!-- container-fluid end-->
+   
+                                   
+        
+       
+    <div id="showalt" class="dropdown-content " style="position:absolute; top: 200px; right:20px; width: 300px; background:white;border:4px solid #ff0909;  visibility: hidden;">
+        <p class="con" id="v" style="text-align:center;font-size:large;font-weight:bold">Connect Vcc </p>
+       
+        <p class="con" id="gnd" style="text-align:center;font-size:large;font-weight:bold">Please disconnect GND  </p>
+
+    
+
+</div>
+
+       
+
+                        <div id="draggable"  style="top:100px; position:absolute;left: 28px;">
+                              
+                            <div id="graphshowsr" draggable="true"   id="draggable"  id="drag1" style="top:80px; position:absolute; left: 28px; width: 580px; cursor:pointer; background:#96baf0;font-size:16px;font-weight:bold;border:1px solid #3385ff; display: none; ">
+                                      <div class="grphtitle"> 
+                                        <p style="text-align:center;color:rgb(26,0,97)">GRAPH <p>Drag to view instruction and the truth table</p> <span  onclick="graphclose()" style="cursor:pointer;  font-size:30px;position:absolute;top: 5px;right:10px;"> <i class="bi bi-x"></i></span>
+                                        <div class="graphdisplay1" style="background-color:white;border:1px solid #3385ff">
+                                        <div id="chartContainer" style="height: 100px; width: 570px;"></div>
+                                        <div id="chartContainerds" style="height: 100px; width: 570px;"></div>
+                                        <div id="chartContainerq10" style="height: 100px; width: 570px;"></div>
+                                        <div id="chartContainerq11" style="height: 100px; width: 570px;"></div>
+                                        <div id="chartContainerq12" style="height: 100px; width: 570px;"></div>
+                                        <div id="chartContainerq13" style="height: 100px; width: 570px;"></div>
+                                        </div>
+
+                    </div>
+                </div>
+                </div>
+                <div id="draggable"  style="top:100px; position:absolute;left: 28px; ">
+                <div id="graphshowsr2" draggable="true"   id="draggable"  id="drag1" style="top:80px; position:absolute; left: 28px; width: 580px; cursor:pointer; background:#96baf0;font-size:16px;font-weight:bold;border:1px solid #3385ff; display: none; ">
+                    <div class="grphtitle"> 
+                      <p style="text-align:center;color:rgb(26,0,97)">GRAPH <p>Drag to view instruction and the truth table</p> <span  onclick="graphclose2()" style="cursor:pointer;  font-size:30px;position:absolute;top: 5px;right:10px;"> <i class="bi bi-x"></i></span>
+                      <div class="graphdisplay2" style="background-color:white;border:1px solid #3385ff">
+                      <div id="chartContainercp2" style="height: 100px; width: 570px;"></div>
+                      <div id="chartContainers" style="height: 100px; width: 570px;"></div>
+                      <div id="chartContainerp0" style="height: 100px; width: 570px;"></div>
+                      <div id="chartContainerp1" style="height: 100px; width: 570px;"></div>
+                      <div id="chartContainerp2" style="height: 100px; width: 570px;"></div>
+                      <div id="chartContainerp3" style="height: 100px; width: 570px;"></div>
+                      <div id="chartContainerq0" style="height: 100px; width: 570px;"></div>
+                      <div id="chartContainerq1" style="height: 100px; width: 570px;"></div>
+                      <div id="chartContainerq2" style="height: 100px; width: 570px;"></div>
+                      <div id="chartContainerq3" style="height: 100px; width: 570px;"></div>
+                      </div>
+
+  </div>
+</div>
+            </div>
+
+          
+        </body>
+        
+        
+        </html>
