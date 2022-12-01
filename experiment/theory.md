@@ -1,4 +1,4 @@
-### Theory 
+## Theory
 
  <div class="content" id="experiment-article-section-2-content">                            
  Shift register:&nbsp;A register capable of shifting information either to right or left is called a shift register.In a shift register, the flip-flops are connected in such a way that the binary bits are entered into the shift register,shifted from one location to another and finally shifted out.Different types of shift register:&nbsp;
@@ -7,7 +7,6 @@
 		  <li>Serial-in-Parallel-out(SIPO)</li>
 		  <li>Parallel-in-Serial-out(PISO)</li>
 		  <li>Parallel-in-Parallel-out(PIPO)</li>
-		  
 </ul>
            
  <div align="center" class="big" style="text-decoration:underline;" >  4 Bit Shift Register </div>
