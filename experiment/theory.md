@@ -8,11 +8,11 @@ Shift register: A register capable of shifting information either to right or le
 - Parallel-in-Parallel-out(PIPO)
 
            
- 4 Bit Shift Register 
+ ### 4 Bit Shift Register 
 
 <div align="center">
  <img src="images/4bitshifter.jpg" style="width:400px;height:300px;" />
-<p>Figure 1:&nbsp;74LS95B(4 bit Shift Register)</p>
+<p>Figure 1:&nbsp;74LS95B(4 bit Shift Register)</p></div>
 						
 The SN54/74LS95B is a 4-Bit Shift Register with serial and parallel synchronous operating modes.These operating modes are controlled by a mode control input (S). The serial shift right and parallel load are activated by separate clock inputs which are selected by a mode control input (S). The data is transferred from the serial or parallel D inputs to the Q outputs synchronous with the HIGH to LOW transition of the appropriate clock input.
 
@@ -48,14 +48,14 @@ on the register outputs.
 ### MODE SELECT/TRUTH TABLE 
 
 <div align="center">
-                             <img src="images/exp9truthtable.jpg" style="width:700px;height:200px;" /></div>
+<img src="images/exp9truthtable.jpg" style="width:700px;height:200px;" /></div>
 							
 
-- L=&nbsp;Low voltage level
-- H=&nbsp;High voltage level
-- X:&nbsp;Don't care
-- X:&nbsp;Don't care
-- l:&nbsp;Low voltage level one set-up prior to the high to low clock transition
-- h:&nbsp;high voltage level one set-up prior to the high to low clock transition
-- P<sub>n</sub>:&nbsp;Lower case letters indicate the state of referenced input(or output) one set-up time prior to the high to low clock transition
+- L=Low voltage level
+- H=High voltage level
+- X:Don't care
+- X:Don't care
+- l:Low voltage level one set-up prior to the high to low clock transition
+- h:high voltage level one set-up prior to the high to low clock transition
+- P<sub>n</sub>:Lower case letters indicate the state of referenced input(or output) one set-up time prior to the high to low clock transition
                         
