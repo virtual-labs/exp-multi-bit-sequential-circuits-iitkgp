@@ -124,6 +124,11 @@
             document.getElementById("b5").onclick = true;
             document.getElementById("b6").onclick = true;*/
          }
+         /*three line added */
+         if( (vcc.src.match("green")) &&(s.src.match("red") )){
+            document.getElementById("clkb").disabled = false;
+           document.getElementById("clkbs").disabled = false;
+        }
        
          if((s.src.match("green"))&& (P1.src.match("green")) && (vcc.src.match("green")) ){
          

@@ -17,21 +17,21 @@
 <b>Name of Developer | <b> **Prof. Gautam Saha**
 :--|:--|
 <b> Institute | <b>  **Indian Institute of Technology Kharagpur**
-<b> Email id|     <b>  **gsaha @ ece.iitkgp.ac.in **
+<b> Email id|     <b>  **gsaha@ece.iitkgp.ac.in**
 <b> Department |  **Electronics & Electrical Communication Engineering**
 <b>Webpage| <b> [Web:http://www.iitkgp.ac.in/fac-profiles/showprofile.php?empcode=bTmUW]
 
 <b>Name of Developer | <b> **Prof. Indrajit Chakrabarti**
 :--|:--|
 <b> Institute | <b>  **Indian Institute of Technology Kharagpur**
-<b> Email id|     <b>  **indrajit@ece.iitkgp.ac.in **
+<b> Email id|     <b>  **indrajit@ece.iitkgp.ac.in**
 <b> Department |  **Electronics & Electrical Communication Engineering**
 <b>Webpage| <b> [Web:http://www.iitkgp.ac.in/fac-profiles/showprofile.php?empcode=bVmbU]
 
 <b>Name of Developer | <b> **Prof. Achintya Halder**
 :--|:--|
 <b> Institute | <b>  **Indian Institute of Technology Kharagpur**
-<b> Email id|     <b>  **achintya@ece.iitkgp.ac.in **
+<b> Email id|     <b>  **achintya@ece.iitkgp.ac.in**
 <b> Department |  **Electronics & Electrical Communication Engineering**
 
 
