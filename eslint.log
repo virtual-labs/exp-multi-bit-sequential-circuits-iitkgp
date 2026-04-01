@@ -1,0 +1,149 @@
+
+/home/runner/work/exp-multi-bit-sequential-circuits-iitkgp/exp-multi-bit-sequential-circuits-iitkgp/experiment/simulation/exp9a/addtbl_exp9a.js
+   7:5   warning  'tabrowindex' is assigned a value but never used  no-unused-vars
+   8:5   warning  'arr' is assigned a value but never used          no-unused-vars
+   9:5   warning  'table' is defined but never used                 no-unused-vars
+  10:5   warning  'clmns' is defined but never used                 no-unused-vars
+  10:12  warning  'vlt' is defined but never used                   no-unused-vars
+  10:17  warning  'columns' is defined but never used               no-unused-vars
+  10:26  warning  'rest' is defined but never used                  no-unused-vars
+  11:5   warning  'dataPoints' is assigned a value but never used   no-unused-vars
+  13:5   warning  'table' is already defined                        no-redeclare
+  13:12  warning  'rows' is defined but never used                  no-unused-vars
+  13:18  warning  'switching' is defined but never used             no-unused-vars
+  13:29  warning  'i' is defined but never used                     no-unused-vars
+  13:32  warning  'x' is defined but never used                     no-unused-vars
+  13:35  warning  'y' is defined but never used                     no-unused-vars
+  13:38  warning  'shouldSwitch' is defined but never used          no-unused-vars
+  14:10  warning  'instbl' is defined but never used                no-unused-vars
+  51:15  warning  'plotshftreg1' is defined but never used          no-unused-vars
+  55:9   warning  'plotgraph' is not defined                        no-undef
+  56:9   warning  'dsplot' is not defined                           no-undef
+  57:9   warning  'q10plot' is not defined                          no-undef
+  58:9   warning  'q11plot' is not defined                          no-undef
+  59:9   warning  'q12plot' is not defined                          no-undef
+  60:9   warning  'q13plot' is not defined                          no-undef
+  65:15  warning  'plotshftreg2' is defined but never used          no-unused-vars
+  68:9   warning  'plotgraphcp2' is not defined                     no-undef
+  69:9   warning  'splot' is not defined                            no-undef
+  70:9   warning  'p0plot' is not defined                           no-undef
+  71:9   warning  'q0plot' is not defined                           no-undef
+  72:9   warning  'p1plot' is not defined                           no-undef
+  73:9   warning  'q1plot' is not defined                           no-undef
+  74:9   warning  'p2plot' is not defined                           no-undef
+  75:9   warning  'q2plot' is not defined                           no-undef
+  76:9   warning  'p3plot' is not defined                           no-undef
+  77:9   warning  'q3plot' is not defined                           no-undef
+
+/home/runner/work/exp-multi-bit-sequential-circuits-iitkgp/exp-multi-bit-sequential-circuits-iitkgp/experiment/simulation/exp9a/graphchartjs9a.js
+    7:5   warning  'dataPoints' is assigned a value but never used   no-unused-vars
+    8:5   warning  'dataPointr' is assigned a value but never used   no-unused-vars
+    9:5   warning  'dataPointq' is assigned a value but never used   no-unused-vars
+   10:5   warning  'dataPointqb' is assigned a value but never used  no-unused-vars
+   14:10  warning  'plotgraph' is defined but never used             no-unused-vars
+   15:3   warning  'CanvasJS' is not defined                         no-undef
+   22:19  warning  'CanvasJS' is not defined                         no-undef
+   40:7   warning  Duplicate key 'lineThickness'                     no-dupe-keys
+   48:7   warning  Duplicate key 'lineThickness'                     no-dupe-keys
+   76:10  warning  'plotgraphcp2' is defined but never used          no-unused-vars
+   77:3   warning  'CanvasJS' is not defined                         no-undef
+   84:19  warning  'CanvasJS' is not defined                         no-undef
+   99:7   warning  Duplicate key 'lineThickness'                     no-dupe-keys
+  107:7   warning  Duplicate key 'lineThickness'                     no-dupe-keys
+  136:10  warning  'splot' is defined but never used                 no-unused-vars
+  145:20  warning  'CanvasJS' is not defined                         no-undef
+  188:10  warning  'dsplot' is defined but never used                no-unused-vars
+  197:20  warning  'CanvasJS' is not defined                         no-undef
+  240:10  warning  'p0plot' is defined but never used                no-unused-vars
+  249:20  warning  'CanvasJS' is not defined                         no-undef
+  292:10  warning  'p1plot' is defined but never used                no-unused-vars
+  301:20  warning  'CanvasJS' is not defined                         no-undef
+  346:10  warning  'p2plot' is defined but never used                no-unused-vars
+  355:20  warning  'CanvasJS' is not defined                         no-undef
+  400:10  warning  'p3plot' is defined but never used                no-unused-vars
+  409:20  warning  'CanvasJS' is not defined                         no-undef
+  454:10  warning  'q0plot' is defined but never used                no-unused-vars
+  463:20  warning  'CanvasJS' is not defined                         no-undef
+  508:10  warning  'q1plot' is defined but never used                no-unused-vars
+  516:21  warning  'CanvasJS' is not defined                         no-undef
+  562:10  warning  'q2plot' is defined but never used                no-unused-vars
+  570:21  warning  'CanvasJS' is not defined                         no-undef
+  617:10  warning  'q3plot' is defined but never used                no-unused-vars
+  625:21  warning  'CanvasJS' is not defined                         no-undef
+  674:10  warning  'q10plot' is defined but never used               no-unused-vars
+  676:22  warning  'CanvasJS' is not defined                         no-undef
+  724:10  warning  'q11plot' is defined but never used               no-unused-vars
+  726:22  warning  'CanvasJS' is not defined                         no-undef
+  773:10  warning  'q12plot' is defined but never used               no-unused-vars
+  775:22  warning  'CanvasJS' is not defined                         no-undef
+  822:10  warning  'q13plot' is defined but never used               no-unused-vars
+  824:22  warning  'CanvasJS' is not defined                         no-undef
+
+/home/runner/work/exp-multi-bit-sequential-circuits-iitkgp/exp-multi-bit-sequential-circuits-iitkgp/experiment/simulation/exp9a/grid_axis_9a.js
+   28:14  warning  'x' is not defined                           no-undef
+   28:18  warning  'x' is not defined                           no-undef
+   28:28  warning  'x' is not defined                           no-undef
+   29:25  warning  'x' is not defined                           no-undef
+   30:25  warning  'x' is not defined                           no-undef
+   33:18  warning  'y' is not defined                           no-undef
+   33:22  warning  'y' is not defined                           no-undef
+   33:33  warning  'y' is not defined                           no-undef
+   34:32  warning  'y' is not defined                           no-undef
+   35:37  warning  'y' is not defined                           no-undef
+   51:14  warning  'clockstop' is defined but never used        no-unused-vars
+   63:14  warning  'clockpulse' is defined but never used       no-unused-vars
+  113:10  warning  'x' is not defined                           no-undef
+  113:14  warning  'x' is not defined                           no-undef
+  113:24  warning  'x' is not defined                           no-undef
+  114:21  warning  'x' is not defined                           no-undef
+  115:21  warning  'x' is not defined                           no-undef
+  117:14  warning  'y' is not defined                           no-undef
+  117:18  warning  'y' is not defined                           no-undef
+  117:29  warning  'y' is not defined                           no-undef
+  118:28  warning  'y' is not defined                           no-undef
+  119:33  warning  'y' is not defined                           no-undef
+  134:14  warning  'clockpulses1' is defined but never used     no-unused-vars
+  166:14  warning  'clockpulses0' is defined but never used     no-unused-vars
+  204:18  warning  'drawGridr' is defined but never used        no-unused-vars
+  211:14  warning  'x' is not defined                           no-undef
+  211:18  warning  'x' is not defined                           no-undef
+  211:28  warning  'x' is not defined                           no-undef
+  212:25  warning  'x' is not defined                           no-undef
+  213:25  warning  'x' is not defined                           no-undef
+  215:18  warning  'y' is not defined                           no-undef
+  215:22  warning  'y' is not defined                           no-undef
+  215:33  warning  'y' is not defined                           no-undef
+  216:32  warning  'y' is not defined                           no-undef
+  217:37  warning  'y' is not defined                           no-undef
+  227:18  warning  'clockpulser1' is defined but never used     no-unused-vars
+  266:18  warning  'clockpulser0' is defined but never used     no-unused-vars
+  308:18  warning  'x' is not defined                           no-undef
+  308:22  warning  'x' is not defined                           no-undef
+  308:32  warning  'x' is not defined                           no-undef
+  309:29  warning  'x' is not defined                           no-undef
+  310:29  warning  'x' is not defined                           no-undef
+  312:22  warning  'y' is not defined                           no-undef
+  312:26  warning  'y' is not defined                           no-undef
+  312:37  warning  'y' is not defined                           no-undef
+  313:36  warning  'y' is not defined                           no-undef
+  314:41  warning  'y' is not defined                           no-undef
+  324:26  warning  'clockpulseq1' is defined but never used     no-unused-vars
+  356:26  warning  'clockpulseq0' is defined but never used     no-unused-vars
+  397:10  warning  'x' is not defined                           no-undef
+  397:14  warning  'x' is not defined                           no-undef
+  397:24  warning  'x' is not defined                           no-undef
+  398:22  warning  'x' is not defined                           no-undef
+  399:22  warning  'x' is not defined                           no-undef
+  401:14  warning  'y' is not defined                           no-undef
+  401:18  warning  'y' is not defined                           no-undef
+  401:29  warning  'y' is not defined                           no-undef
+  402:29  warning  'y' is not defined                           no-undef
+  403:34  warning  'y' is not defined                           no-undef
+  413:10  warning  'clockpulseqbar0' is defined but never used  no-unused-vars
+  444:10  warning  'clockpulseqbar1' is defined but never used  no-unused-vars
+
+/home/runner/work/exp-multi-bit-sequential-circuits-iitkgp/exp-multi-bit-sequential-circuits-iitkgp/experiment/simulation/exp9a/ledonoff_exp9a.js
+  64:16  error  Parsing error: Identifier 'sleep' has already been declared
+
+✖ 138 problems (1 error, 137 warnings)
+
